@@ -57,7 +57,7 @@
                     </div>
                     <div class="mt-3 d-flex justify-content-center flex-column align-items-center">
                         <button type="submit" class="btn btn-outline-secondary">Inserisci Articolo</button>
-                        <a href="{{route('homepage')}}" class="text-secondary mt-2">Torna alla Home</a>
+                        <a href="{{route('home')}}" class="text-secondary mt-2">Torna alla Home</a>
                     </div>
                 </form>
 
