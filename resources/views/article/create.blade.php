@@ -9,7 +9,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form class="card p-5 shadow" enctype="multipart/form-data">
+                <form action="{{route('article.store')}}" method="POST" class="card p-5 shadow" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo</label>
                         <input type="text" name="title" class="form-control" id="title"
@@ -35,7 +35,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="categpry" class="form-label">Categoria</label>
+                        <label for="category" class="form-label">Categoria</label>
                         <select name="category" id="category" class="form-control">
                             <option selected disabled>Seleziona una categoria</option>
                             @foreach ($categories as $category)

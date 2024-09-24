@@ -3,6 +3,13 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h1>The Aulab Post</h1>
+                
+                @if (session('image'))
+                <div class="alert alert-success">
+                    {{session('message')}}
+                </div>
+                    
+                @endif
             </div>
         </div>
     </div>
