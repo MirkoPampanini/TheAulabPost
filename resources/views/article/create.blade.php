@@ -10,12 +10,13 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
                 <form action="{{route('article.store')}}" method="POST" class="card p-5 shadow" enctype="multipart/form-data">
+                    @csrf
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo</label>
                         <input type="text" name="title" class="form-control" id="title"
                             value="{{ old('title') }}">
                         @error('title')
-                            <span class="text-danger">{{ $meassage }}</span>
+                            <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="mb-3">
@@ -23,7 +24,7 @@
                         <input type="text" name="subtitle" class="form-control" id="subtitle"
                             value="{{ old('subtitle') }}">
                         @error('subtitle')
-                            <span class="text-danger">{{ $meassage }}</span>
+                            <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="mb-3">
@@ -31,7 +32,7 @@
                         <input type="file" name="image" class="form-control" id="image"
                             value="{{ old('image') }}">
                         @error('image')
-                            <span class="text-danger">{{ $meassage }}</span>
+                            <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="mb-3">
@@ -43,16 +44,16 @@
                             @endforeach
                         </select>
                         @error('category')
-                            <span class="text-danger">{{ $meassage }}</span>
+                            <span class="text-danger">{{ $message }}</span>
                         @enderror
                         
                     </div>
                     <div class="mb-3">
                         <label for="body" class="form-label">Corpo del testo</label>
-                        <textarea type="body"class="form-control" id="body" cols="30" rows="7">
-                            {{ old('image') }}</textarea>
+                        <textarea name="body"class="form-control" id="body" cols="30" rows="7">
+                            {{ old('body') }}</textarea>
                         @error('body')
-                            <span class="text-danger">{{ $meassage }}</span>
+                            <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="mt-3 d-flex justify-content-center flex-column align-items-center">
